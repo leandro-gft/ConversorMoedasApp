@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.buttonCalculate = findViewById(R.id.button_calculate);
 
         this.mViewHolder.buttonCalculate.setOnClickListener(this);
+
+        this.clearValues();
     }
 
     @Override
@@ -34,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // mostra mensagem pro usuario
                 Toast.makeText(this, this.getString(R.string.informe_valor), Toast.LENGTH_LONG).show();
             } else {
+                Double real = Double.valueOf(value);
+
+                this.mViewHolder.textDolar.setText(String.format("%.2f", (real/5.873)));
+                this.mViewHolder.textEuro.setText(String.format("%.2f", (real/6.328)));
             }
         }
     }
