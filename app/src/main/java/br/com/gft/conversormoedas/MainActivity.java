@@ -7,8 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewHolder mViewHolder = new ViewHolder();
 
@@ -27,9 +28,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.button_calculate){
-            
+        if (v.getId() == R.id.button_calculate) {
+            String value = this.mViewHolder.editValue.getText().toString();
+            if (value.equals("")) {
+                // mostra mensagem pro usuario
+                Toast.makeText(this, this.getString(R.string.informe_valor), Toast.LENGTH_LONG).show();
+            } else {
+            }
         }
+    }
+
+    private void clearValues(){
+        this.mViewHolder.textEuro.setText("");
+        this.mViewHolder.textDolar.setText("");
+
     }
 
     private static class ViewHolder {
