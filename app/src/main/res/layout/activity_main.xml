@@ -3,48 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_margin="8dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/qual_o_valor_em_real" />
+        android:gravity="center"
+        android:text="@string/qual_o_valor_em_real"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/edit_value"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="@string/valor_em_dolar" />
 
     <TextView
         android:id="@+id/text_dolar"
         android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_dolar" />
+        android:text="@string/valor_em_dolar"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="@string/valor_em_euro" />
 
     <TextView
         android:id="@+id/text_euro"
+        android:textSize="25sp"
+        android:textColor="@color/colorAccent"
         android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_euro" />
+        android:text="@string/valor_em_euro"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/button_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorAccent"
         android:text="@string/calcular"
-        android:background="@color/colorAccent"/>
+        android:textColor="@color/colorLight" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </LinearLayout>
